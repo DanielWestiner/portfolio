@@ -1,0 +1,184 @@
+:root {
+    /* Fonts Used */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Baloo Bhaijaan 2', monospace;
+/* Font Weights */
+    --fw-reg: 400;
+    --fw-bold: 900;
+/* Colors */
+    --clr-light: #E0E4DD;
+    --clr-dark: #245D57;
+    --clr-accent: #BAC9BF;
+/* Font Sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.95em 1.25em 0.95em rgba(2,2,2,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+/* Updates these custom properties for screen sizing */
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem
+    }
+}
+
+/* General Style */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typogrpahy */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { 
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+.section-intro {
+    font-weight: 200;
+}
+
+.section-intro strong {
+    display: block;
+}
+
+.title {
+margin-bottom: 0.25em;
+}
+
+.subtitle-intro {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.subtitle-intro,
+.section-contact-subtitle {
+    background: var(--clr-accent);
+    font-family: var(--font-secondary);
+    margin-bottom: 1em;
+
+}
+
+
+/* Introduction Section */
+
+.intro {
+    position: relative;
+}
+
+.intro-img {
+    box-shadow: var(--bs);
+    border-top-left-radius: 25%;
+    /* border-top-right-radius: 25%; */
+    /* border-bottom-left-radius: 25%; */
+    border-bottom-right-radius: 25%;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        grid-column-gap: 1em ;
+        margin: 0 auto;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .intro-img {
+        grid-area: img;
+        min-width: 250px;
+        min-height: 250px;
+        position: relative;
+    }
+    .subtitle-intro {
+        align-self: flex-start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        grid-align: right;
+        position: relative;
+        left: -1.5em;
+        text-align: right;
+    }
+}
+
+.subtitle-intro {
+    display: block;
+    font-size: 25px;
+}
+
+.about-me {
+    background-color: var(--clr-dark);
+    background-image: url(../images/image2.jpg) ;
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+/* Decorative Line */
+.section-about::after{
+    content: "";
+    display: block;
+    width: 25%;
+    height: 2px;
+    margin: .5em, auto, 1em;
+    background: var(--clr-light);
+}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: var(--fw-bold);
+
+}
+
+.btn:hover {
+    transform: scale(1.15);
+    border: 2px dotted;
+}
