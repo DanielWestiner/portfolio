@@ -245,13 +245,14 @@ margin-bottom: 0.25em;
     background: var(--clr-accent);
 }
 
-.portfolio-img {
+ .portfolio-img { 
     transition: transform 300ms;
     opacity: 250ms linear;
-    width: 50%;
-    display: flex;
+    
+    /* width: 50%; */
+    /* display: flex;
     flex-basis: 50%;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .portfolio-img:hover {
@@ -259,8 +260,12 @@ margin-bottom: 0.25em;
     opacity: .9;
 }
 
-@media screen and (min-width: 580px) {
-    .portfolio {
-        flex-basis: 50%;
+/* @media screen and (min-width: 580px) {
+    .port-row {
+        display: flex;
+        flex-flow: row-wrap;
         flex-wrap: wrap;
+        list-style: none;
     } */
+
+   
