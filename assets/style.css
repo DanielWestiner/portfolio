@@ -264,6 +264,9 @@ li a {
     #img1 {
         width: 90%;
     }
+#contact {
+    margin-top: 100px;
+}
 
 /*  Footer Begins here */
 
@@ -291,13 +294,4 @@ footer {
 
 footer a {
     color: inherit;
-}
-
-.footer-link:hover
-.social-list-link:hover {
-    opacity: .7;
-}
-
-.footer-link:hover {
-    text-decoration: wavy;
 }
